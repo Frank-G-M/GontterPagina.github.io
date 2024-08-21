@@ -1,0 +1,57 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra - Gontter</title>
+    <link rel="stylesheet" href="/css/Compra.css">
+    <script src="modal.js"></script>
+    <script src="dark.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="image-section">
+          <img src="/img/robot.jpg" alt="Imagen">
+        </div>
+        <div class="form-section">
+          <input type="text" placeholder="Nombres">
+          <input type="text" placeholder="Apellidos">
+          <select>
+            <option value="">Tipo de documento</option>
+            <option value="ti">Tarjeta de Identidad</option>
+            <option value="cc">Cédula de Ciudadanía</option>
+            <option value="ce">Cédula de Extranjería</option>
+          </select>
+          <input type="text" placeholder="Numero de documento">
+          <input type="text" placeholder="Dirección">
+          <input type="text" placeholder="Barrio">
+          <input type="text" placeholder="Ciudad">
+          <input type="text" placeholder="Número telefónico">
+          <select id="payment-method" onchange="showPaymentOptions()">
+            <option value="">Método de pago</option>
+            <option value="contra-entrega">Contra entrega</option>
+            <option value="tarjeta-debito">Tarjeta Débito</option>
+            <option value="tarjeta-credito">Tarjeta de Crédito</option>
+            <option value="paypal">PayPal</option>
+          </select>
+          <div id="additional-options"></div>
+          <button onclick="processPurchase()">Realizar compra</button>
+        </div>
+      </div>
+    
+      <div class="preloader" id="preloader">
+        <img src="/img/carga.gif" alt="Cargando">
+      </div>
+    
+      <div class="modal" id="successModal">
+        <div class="modal-content">
+          <h2>Compra exitosa</h2>
+          <button class="back-button" onclick="goToPage()">Click para regresar</button>
+        </div>
+      </div>
+<footer>
+    <div class="grupo-2">
+      <small>&copy; 2024 <b>Build Software</b> - Todos Los Derechos Reservados</small>
+  </div>   
+</footer>
+</body>
+</html>

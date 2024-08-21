@@ -1,0 +1,174 @@
+body {
+  background-color: #ffffff; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  flex-direction: column;
+}
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+}
+.container {
+  display: flex;
+  padding: 8px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 900px; /* Ajuste el ancho máximo del contenedor */
+  width: 100%;
+  flex-wrap: wrap;
+  height: auto;
+  box-sizing: border-box;
+  justify-content: space-between; /* Asegura que el formulario y la imagen estén alineados correctamente */
+}
+
+.image-section {
+  flex: 1;
+  margin: 6px;
+}
+
+.image-section img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+.form-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px; /* Asegura que el formulario no se extienda demasiado */
+  padding: 10px; 
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.form-section input, .form-section select {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  background-color: #f7f7f7b4;
+}
+
+.form-section button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0b6964;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-section button:hover {
+  background: #12aaa2;
+}
+
+.preloader, .modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(8, 109, 100);
+  justify-content: center;
+  align-items: center;
+}
+
+.preloader img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.modal-content {
+  background-color: #18afa8;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: #ecebeb;
+}
+
+.back-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6ac0bc;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.back-button:hover {
+  background: #096d68;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  background-color: transparent; 
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+footer .grupo-2 {
+  color: #808080; 
+}
+
+footer small {
+  font-size: 14px;
+}
+
+/* Diseño adaptativo para dispositivos móviles */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .image-section img {
+      max-width: 100%;
+  }
+
+  .form-section {
+      width: 100%;
+      max-width: none;
+  }
+
+  footer {
+      padding: 15px 10px;
+      margin-top: 20px;
+  }
+
+  footer small {
+      font-size: 12px;
+      line-height: 1.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-section button {
+      padding: 12px;
+      font-size: 16px;
+  }
+
+  .form-section input, .form-section select {
+      padding: 12px;
+  }
+
+  footer small {
+      font-size: 11px;
+  }
+}
