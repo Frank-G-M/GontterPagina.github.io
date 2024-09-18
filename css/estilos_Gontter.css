@@ -854,4 +854,9 @@ main{
         grid-gap: 30px;
         padding: 35px 0px;
     }
+    .form-group select {
+        width: 100%; /* Hacer que el select ocupe todo el ancho del contenedor */
+        max-width: 100%; /* Asegurar que no exceda el ancho del contenedor */
+        box-sizing: border-box; /* Incluir el padding y borde en el cálculo del ancho */
+    }
 }
